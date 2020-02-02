@@ -1,4 +1,45 @@
 {
   "name": "yttv-desktop",
-  "main": "src/app.js"
+  "main": "src/app.js",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "npx electron .",
+    "release": "npx electron-builder -p always"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Floffah/yttv-desktop.git"
+  },
+  "keywords": [],
+  "author": "Floffah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Floffah/yttv-desktop/issues"
+  },
+  "homepage": "https://github.com/Floffah/yttv-desktop#readme",
+  "description": "",
+  "dependencies": {
+    "custom-electron-titlebar": "^3.2.2-hotfix62"
+  },
+  "devDependencies": {
+    "electron": "^7.1.11"
+  },
+  "build": {
+    "productName": "YTTV Desktop",
+    "copyright": "Copyright © year ${author}",
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "src/icon.ico"
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "repo": "yttv-desktop",
+        "owner": "Floffah"
+      }
+    ]
+  }
 }
